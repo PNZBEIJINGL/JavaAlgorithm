@@ -23,6 +23,62 @@ public class BinarySearchTree implements Tree {
     }
 
     public boolean deleteNode(int key) {
+        Node current = root;
+        Node parent = root;
+        boolean isLeftChild = false;
+        //查找删除的节点， 如果没有找到则删除
+        while (current.getData() != key) {
+            parent = current;
+            if (current.getData() > key) {
+                isLeftChild = true;
+                current = current.getLeftNode();
+            } else {
+                isLeftChild = false;
+                current = current.getRightNode();
+            }
+            if (current == null) {
+                return false;
+            }
+        }
+
+        //删除节点没有子节点
+        if (current.getLeftNode() == null && current.getRightNode() == null) {
+            if (current == root) {
+                root = null;
+            } else if (isLeftChild == true) {
+                parent.setLeftNode(null);
+            } else {
+                parent.setRightNode(null);
+            }
+            return true;
+        }
+        //右子树为空，左子树不为空
+        if (current.getLeftNode() != null && current.getRightNode() == null) {
+            if (current == root) {
+                root = current.getLeftNode();
+            } else if (isLeftChild) {
+                parent.setLeftNode(current.getLeftNode());
+            } else {
+                parent.setRightNode(current.getLeftNode());
+            }
+            return true;
+        }
+        //左子树为空， 右子树不为空
+        if (current.getLeftNode() == null && current.getRightNode() != null) {
+            if (current == root) {
+                root = current.getRightNode();
+            } else if (isLeftChild) {
+                parent.setLeftNode(current.getRightNode());
+            } else {
+                parent.setRightNode(current.getRightNode());
+            }
+            return true;
+        }
+
+        if (current.getLeftNode() != null && current.getRightNode() != null) {
+            //todo
+        }
+
         return false;
     }
 
