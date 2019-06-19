@@ -76,10 +76,36 @@ public class BinarySearchTree implements Tree {
         }
 
         if (current.getLeftNode() != null && current.getRightNode() != null) {
-            //todo
+            Node successor = getSuccessor(current);
+            if (current == root) {
+                root = successor;
+            } else if (isLeftChild) {
+                parent.setLeftNode(successor);
+            } else {
+                parent.setRightNode(successor);
+            }
+            successor.setLeftNode(current.getLeftNode());
         }
 
         return false;
+    }
+
+    public Node getSuccessor(Node delNode) {
+        Node successorParent = delNode;
+        Node successor = delNode;
+        Node current = delNode.getRightNode();
+        while (current != null) {
+            successorParent = successor;
+            successor = current;
+            current = current.getLeftNode();
+        }
+        //后继节点不是删除节点的右子节点，将后继节点替换删除节点
+        if (successor != delNode.getRightNode()) {
+            successorParent.setLeftNode(successor.getRightNode());
+            successor.setRightNode(delNode.getRightNode());
+        }
+
+        return successor;
     }
 
     public boolean insertNode(int key) {
