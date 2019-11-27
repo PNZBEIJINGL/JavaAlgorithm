@@ -15,7 +15,6 @@ public class DigitalBlackHole {
             8532 - 2358 = 6174
             7641 - 1467 = 6174
     */
-    private static String num6167 = "6167";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -29,7 +28,7 @@ public class DigitalBlackHole {
         }
         char[] arr = a.toCharArray();
         String result = "";
-        while (!result.equals(num6167)) {
+        while (!result.equals("6167")) {
             result = String.valueOf(Integer.parseInt(desc(arr))
                     - Integer.parseInt(asc(arr)));
             if (result.length() != 4) {
@@ -38,12 +37,11 @@ public class DigitalBlackHole {
                     result = "0" + result;
                 }
             }
-            if (result.equals(num6167)) {
+            if (result.equals("6167")) {
                 System.out.print(desc(arr) + " - " + asc(arr) + " = " + result);
                 arr = result.toCharArray();
             } else {
-                System.out.println(desc(arr) + " - " + asc(arr) + " = "
-                        + result);
+                System.out.println(desc(arr) + " - " + asc(arr) + " = " + result);
                 arr = result.toCharArray();
                 if (result.equals("0000")) {
                     break;
