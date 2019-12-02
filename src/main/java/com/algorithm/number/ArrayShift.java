@@ -13,28 +13,29 @@ import java.util.Scanner;
  */
 public class ArrayShift {
 
-    //6 2
-    //1 2 3 4 5 6
-
-    //1 2 1 4 5 6  3
-    //3 4 1 2 5 6
-    //3 4 1 2
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         int a = Integer.parseInt(str.split(" ")[0]);
-        int b = Integer.parseInt(str.split(" ")[1]);
-        int[] array = new int[a];
+        int length = Integer.parseInt(str.split(" ")[1]);
+        int[] arr = new int[a];
         for (int i = 0; i < a; i++) {
-            array[i] = sc.nextInt();
+            arr[i] = sc.nextInt();
         }
 
-        int temp;
-        int s = b % a;
-        for (int i = 0; i < array.length; i++) {
-
+        length = length % arr.length;
+        for (int i = arr.length - length; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
 
-        System.out.println(a);
+        for (int i = length; i < arr.length; i++) {
+            if(i!=arr.length-1){
+                System.out.print(arr[i - length] + " ");
+            }else{
+                System.out.print(arr[i - length]);
+            }
+        }
+
     }
+
 }
