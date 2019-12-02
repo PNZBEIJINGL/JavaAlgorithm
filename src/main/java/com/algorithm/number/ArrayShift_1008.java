@@ -11,7 +11,7 @@ import java.util.Scanner;
  * 1 2 3 4 5 6
  * 5 6 1 2 3 4
  */
-public class ArrayShift {
+public class ArrayShift_1008 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
