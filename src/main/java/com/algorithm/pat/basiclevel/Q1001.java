@@ -1,4 +1,4 @@
-package com.algorithm.basic;
+package com.algorithm.pat.basiclevel;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  * <p>
  * 每个测试输入包含 1 个测试用例，即给出正整数 n 的值
  */
-public class Callatz_1001 {
+public class Q1001 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();

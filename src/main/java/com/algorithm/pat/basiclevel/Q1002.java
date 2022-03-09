@@ -1,8 +1,8 @@
-package com.algorithm.basic;
+package com.algorithm.pat.basiclevel;
 
 import java.util.Scanner;
 
-public class WritNum_1002 {
+public class Q1002 {
     /*
     读入一个正整数 n，计算其各位数字之和，用汉语拼音写出和的每一位数字。
     输入：每个测试输入包含 1 个测试用例，即给出自然数 n 的值。这里保证 n 小于 10​100

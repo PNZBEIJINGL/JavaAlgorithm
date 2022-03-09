@@ -1,8 +1,8 @@
-package com.algorithm.string;
+package com.algorithm.pat.basiclevel;
 
 import java.util.Scanner;
 
-public class PasswordInput_1067 {
+public class Q1067 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

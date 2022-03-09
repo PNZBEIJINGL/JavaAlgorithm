@@ -1,8 +1,8 @@
-package com.algorithm.number;
+package com.algorithm.pat.basiclevel;
 
 import java.util.Scanner;
 
-public class Answer_1087 {
+public class Q1087 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();

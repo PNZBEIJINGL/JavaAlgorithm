@@ -1,4 +1,4 @@
-package com.algorithm.basic;
+package com.algorithm.pat.basiclevel;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 1009 说反话
  * 给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。
  */
-public class ReverseString_1009 {
+public class Q1009 {
 
     /*
     输入：测试输入包含一个测试用例，在一行内给出总长度不超过 80 的字符串。字符串由若干单词和若干空格组成，

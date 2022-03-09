@@ -1,4 +1,4 @@
-package com.algorithm.number;
+package com.algorithm.pat.basiclevel;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  * 输出：每个测试用例的输出占一行，用规定的格式输出 n 例如：BBSSS1234
  *
  */
-public class ChangeNum_1006 {
+public class Q1006 {
     public static void main(String[] args) {
 
         int[] sign = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};

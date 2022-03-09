@@ -1,4 +1,4 @@
-package com.algorithm.number;
+package com.algorithm.pat.basiclevel;
 
 import java.util.Scanner;
 
@@ -12,7 +12,7 @@ import java.util.Scanner;
  * 在一行中输出不超过N的满足猜想的素数对的个数。
  */
 
-public class Prime_1007 {
+public class Q1007 {
 
     public static void main(String[] args){
         Scanner in=new Scanner(System.in);

@@ -1,4 +1,4 @@
-package com.algorithm.number;
+package com.algorithm.pat.basiclevel;
 
 
 import java.io.BufferedReader;
@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
  * <p>
  * 现给定数字，请编写程序输出能够组成的最小的数。
  */
-public class MinNum_1023 {
+public class Q1023 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));

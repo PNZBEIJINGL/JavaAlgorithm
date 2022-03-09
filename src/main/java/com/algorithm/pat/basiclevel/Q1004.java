@@ -1,4 +1,4 @@
-package com.algorithm.sort;
+package com.algorithm.pat.basiclevel;
 
 /*
 3
@@ -9,7 +9,7 @@ Mary EE990830 95
 
 import java.util.Scanner;
 
-public class ScoreSort_1004 {
+public class Q1004 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

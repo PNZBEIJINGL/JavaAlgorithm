@@ -1,8 +1,8 @@
-package com.algorithm.number;
+package com.algorithm.pat.basiclevel;
 
 import java.util.Scanner;
 
-public class NumAdd_1056 {
+public class Q1056 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

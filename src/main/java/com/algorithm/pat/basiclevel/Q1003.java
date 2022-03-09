@@ -1,7 +1,7 @@
-package com.algorithm.basic;
+package com.algorithm.pat.basiclevel;
 
 import java.util.Scanner;
-public class Pass_1003{
+public class Q1003 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

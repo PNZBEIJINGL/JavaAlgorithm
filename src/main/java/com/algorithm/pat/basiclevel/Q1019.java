@@ -1,4 +1,4 @@
-package com.algorithm.basic;
+package com.algorithm.pat.basiclevel;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -8,7 +8,7 @@ import java.util.Scanner;
  * 然后用第 1 个数字减第 2 个数字，将得到一个新的数字。一直重复这样做，
  * 我们很快会停在有“数字黑洞”之称的 6174，这个神奇的数字也叫 Kaprekar 常数。
  */
-public class DigitalBlackHole_1019 {
+public class Q1019 {
 
     /*     7766 - 6677 = 1089
             9810 - 0189 = 9621

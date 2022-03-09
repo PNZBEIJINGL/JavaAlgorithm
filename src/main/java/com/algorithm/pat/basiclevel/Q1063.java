@@ -1,4 +1,4 @@
-package com.algorithm.basic;
+package com.algorithm.pat.basiclevel;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import java.io.InputStreamReader;
  * 输入：输入第一行给出正整数 N（≤ 10 000）是输入的特征值的个数。随后 N 行，每行给出 1 个特征值的实部和虚部，其间以空格分隔。注意：题目保证实部和虚部均为绝对值不超过 1000 的整数
  * 输出：在一行中输出谱半径，四舍五入保留小数点后 2 位。
  */
-public class RadiusOfGraphs_1063 {
+public class Q1063 {
 
     public static void main(String[] args) throws IOException {
 

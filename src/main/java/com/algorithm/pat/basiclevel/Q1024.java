@@ -1,8 +1,8 @@
-package com.algorithm.basic;
+package com.algorithm.pat.basiclevel;
 
 import java.util.Scanner;
 
-public class HourglassPrinting_1024 {
+public class Q1024 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();

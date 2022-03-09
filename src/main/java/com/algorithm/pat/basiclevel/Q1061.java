@@ -1,4 +1,4 @@
-package com.algorithm.number;
+package com.algorithm.pat.basiclevel;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
  * 第二行给出 M 个不超过 5 的正整数，是每道题的满分值。
  * 第三行给出每道题对应的正确答案，0 代表“非”，1 代表“是”。随后 N 行，每行给出一个学生的解答。数字间均以空格分隔。
  */
-public class GetScore_1061 {
+public class Q1061 {
 
 
     public static void main(String[] args) throws IOException {

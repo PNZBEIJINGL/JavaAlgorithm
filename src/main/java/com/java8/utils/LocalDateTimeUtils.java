@@ -111,23 +111,70 @@ public class LocalDateTimeUtils {
     }
 
     public static void main(String[] args) {
-        LocalDateTime startDT = LocalDateTime.of(2021, 1, 29,0,0,0);
-        LocalDateTime endDT = LocalDateTime.of(2021, 4, 25,23,59,59);
-        long durationDay=getDuration(startDT,endDT);
-        System.out.println(durationDay);
+        LocalDateTime localDateTime=LocalDateTime.now();
+        System.out.println("NOW:"+localDateTime.plusDays(1L));
 
-        Period period = Period.between(startDT.toLocalDate(), endDT.toLocalDate());
-        System.out.println(period.getYears() + " " + period.getMonths() + " " + period.getDays());
+        LocalDateTime start = LocalDateTime.of(2021, 3, 30, 0, 0, 0);
 
-        System.out.println(startDT.toLocalDate().plusMonths(1));
-        System.out.println(startDT.toLocalDate().plusMonths(2));
+        System.out.println(start.plusMonths(1L).minusSeconds(1L));
+        LocalDateTime end = start.plusMonths(1L).minusSeconds(1L);
+
+        Period P2=Period.between(start.toLocalDate(),end.plusDays(1L).toLocalDate());
+        System.out.println(P2.getYears()+" "+P2.getMonths()+" "+P2.getDays());
 
 
-        System.out.println(System.currentTimeMillis());
-        java.util.Random rand = new java.util.Random(System.currentTimeMillis());
-        Integer iValue = Math.abs(rand.nextInt(Integer.MAX_VALUE));
-        System.out.println(iValue);
+      // System.out.println(getRefundMoney());
+       //testPlusMonths();
+    }
 
+    public static void testPlusMonths(){
+        LocalDate now = LocalDate.of(2021,01,29);
+        //两次
+        System.out.println(now.plusMonths(1).plusMonths(1L));
+        //1次2个月
+        System.out.println(now.plusMonths(2));
+    }
+
+    protected static double getRefundMoney() {
+        LocalDateTime start = LocalDateTime.of(2021, 2, 1,0,0,0);
+        LocalDateTime end = LocalDateTime.of(2021, 2, 28,23,59,59);
+        LocalDateTime refund = LocalDateTime.of(2021, 2, 4,0,0,0);
+
+        double daysOfMonth = 30L;
+        long betweenDays = Duration.between(refund, end).toDays() + 1;
+
+        double monthFee = getMonthFeeByItem();
+        double dailyFee = monthFee / daysOfMonth;
+
+        System.out.println( monthFee * Math.floor(betweenDays / daysOfMonth));
+
+        System.out.println(dailyFee);
+        System.out.println(betweenDays);
+        System.out.println(daysOfMonth);
+        System.out.println("betweenDays % daysOfMonth="+(betweenDays % daysOfMonth));
+
+        //费用=整月费+残月费
+        return monthFee * Math.floor(betweenDays / daysOfMonth) + dailyFee * (betweenDays % daysOfMonth);
+    }
+
+
+    protected static  double getMonthFeeByItem() {
+        double factFee =30D;
+        LocalDateTime start = LocalDateTime.of(2021, 2, 1,0,0,0);
+        LocalDateTime end = LocalDateTime.of(2021, 2, 28,23,59,59);
+        LocalDate plus1MonthsTime = start.toLocalDate().plusMonths(1);
+        System.out.println("plus1MonthsTime: "+plus1MonthsTime);
+
+        Period period = Period.between(start.toLocalDate(),end.toLocalDate());
+        if (end.toLocalDate().isAfter(plus1MonthsTime)) {
+            int months = period.getYears() * 12 + period.getMonths() + (period.getDays() == 0 ? 0 : 1);
+            System.out.println("factFee/ months ="+(factFee/ months));
+            return factFee/ months;
+        } else {
+            int days = period.getDays();
+            System.out.println("factFee/ days * 30="+(factFee/ days * 30));
+            return factFee/ days * 30;
+        }
 
     }
 }
