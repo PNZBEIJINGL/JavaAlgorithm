@@ -1,4 +1,4 @@
-package com.jvm.gc;
+package com.java8.jvm;
 
 /**
  * 第二章：引用计数算法的缺陷

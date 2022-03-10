@@ -1,4 +1,4 @@
-package com.jvm.gc;
+package com.java8.jvm;
 
 public class FinalizeEscapeGC {
     public static FinalizeEscapeGC SAVE_HOOK = null;

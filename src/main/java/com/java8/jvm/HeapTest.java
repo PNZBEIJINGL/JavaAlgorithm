@@ -1,4 +1,4 @@
-package com.jvm.gc;
+package com.java8.jvm;
 
 import java.util.ArrayList;
 import java.util.List;

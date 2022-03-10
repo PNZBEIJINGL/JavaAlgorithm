@@ -1,4 +1,4 @@
-package com.jvm.gc;
+package com.java8.jvm;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
