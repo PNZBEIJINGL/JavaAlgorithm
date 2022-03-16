@@ -2,8 +2,27 @@ package com.pat.basiclevel;
 
 import java.util.Scanner;
 
+/**
+ * 1027 打印沙漏
+ * 本题要求你写个程序把给定的符号打印成沙漏的形状。例如给定17个“*”，要求按下列格式打印
+ * *****
+ *  ***
+ *   *
+ *  ***
+ * *****
+ * 输入在一行给出1个正整数N（≤1000）和一个符号，中间以空格分隔
+ * 例如： 19 *
+ * 首先打印出由给定符号组成的最大的沙漏形状，最后在一行中输出剩下没用掉的符号数。
+ * 例如：
+ * *****
+ *  ***
+ *   *
+ *  ***
+ * *****
+ * 2
+ */
 public class Q1027 {
-    //https://pintia.cn/problem-sets/994805260223102976/problems/994805294251491328
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();

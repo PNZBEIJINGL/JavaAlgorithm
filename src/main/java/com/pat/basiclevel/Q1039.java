@@ -4,14 +4,18 @@ import java.util.Scanner;
 
 /**
  * 1039 到底买不买 (20 分)
+ * ppRYYGrrYBR2258
+ * YrR8RrY
+ * Yes 8
+ *
+ * ppRYYGrrYB225
+ * YrR8RrY
+ * No 2
  */
 public class Q1039 {
-    //ppRYYGrrYBR2258
-    //YrR8RrY
-    //Yes 8
-    //ppRYYGrrYB225
-    //YrR8RrY
-    //No 2
+    /**
+     * 思路：定义数组，数据的下标i的 值等于字符的ASC码；数组值是字符出现的次数，然后比较
+     */
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);

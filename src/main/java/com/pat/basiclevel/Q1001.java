@@ -12,6 +12,10 @@ import java.util.Scanner;
  * 每个测试输入包含 1 个测试用例，即给出正整数 n 的值
  */
 public class Q1001 {
+    /**
+     * 思路：循环
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();

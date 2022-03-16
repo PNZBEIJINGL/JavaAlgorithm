@@ -6,13 +6,17 @@ import java.io.InputStreamReader;
 
 /**
  * 1037 在霍格沃茨找零钱
+ * Galleon=17 Sickle
+ * Sickle=29 Knut
  */
 public class Q1037 {
-    //Galleon=17 Sickle
-    //Sickle=29 Knut
+    /**
+     * 思路： 按照规则转换
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
-        //Galleon.Sickle.Knut Galleon.Sickle.Knut
-        //10.16.27 14.1.28
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] inputString = br.readLine().split(" ");
         System.out.println(getback(getSum(inputString[1]) - getSum(inputString[0])));

@@ -11,6 +11,9 @@ import java.io.InputStreamReader;
  *
  */
 public class Q1040 {
+    /**
+     * 思路， PAT 三个字母， A前P的数量N 和A后T的数量M ，M*N 通过A可以组成的PAT数量
+     */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();

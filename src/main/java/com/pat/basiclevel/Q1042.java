@@ -10,6 +10,10 @@ import java.util.Scanner;
  * OUTPUT:e 7
  */
 public class Q1042 {
+    /**
+     * 思路：定义数组记录出现次数，数组下标为字符 ASC码
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String inputString = scanner.nextLine().toLowerCase();
