@@ -13,6 +13,12 @@ import java.math.BigInteger;
  */
 public class Q1017 {
 
+    /**
+     * 思路：
+     * A是1000位数据, long的最大值为以9开头的19位数字，所以只能使用String来存储
+     * Scanner接收的是对象类型,所以不能用Scanner来接收输入，因此选用BufferedReader， BufferedReader通过字符输入流和字符缓冲区读取文本效率也高一些
+     *
+     */
     public static void main(String[] args) throws IOException {
         BufferedReader sc=new BufferedReader(new InputStreamReader(System.in));
         String[] line=sc.readLine().split(" ");
