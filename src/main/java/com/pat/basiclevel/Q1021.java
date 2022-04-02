@@ -18,13 +18,15 @@ import java.io.InputStreamReader;
 public class Q1021 {
     /**
      * 思路
+     * 0-9的ASCII码值为 48-57,创建的数组记录0-9出现次数，数组下标对应数字0-9
+     *
      */
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         char[] input = bf.readLine().toCharArray();
         int[] asc_array = new int[10];
         for (int i = 0; i < input.length; i++) {
-            int asc = (int) input[i] - 48;
+            int asc = (int) input[i] - 48;  //0的ASCII码值为 48
             if (asc >= 0 && asc <= 9) {
                 asc_array[asc] = asc_array[asc] + 1;
             }
