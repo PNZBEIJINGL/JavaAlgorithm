@@ -1,9 +1,8 @@
 package com.java6;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.Timer;
 
 public class TimerTest {
     private static int delay = 1000;
@@ -30,6 +29,7 @@ public class TimerTest {
             if (count == 10)
                 timer.setRepeats(false);
         }
+
     }
 
 
